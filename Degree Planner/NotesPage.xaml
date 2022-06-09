@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Degree_Planner.NotesPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowDefinitions="75" ColumnDefinitions="75, *, 75">
+                <Label Grid.Column="1" Grid.Row="0" 
+                   Text="WGU Degree Plan" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+                <Image Grid.Column ="2" Grid.Row="0" Source="wguLogo" 
+               HeightRequest="75"
+               />
+            </Grid>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Label Text="Notes" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Label x:Name="courseNameText"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Editor x:Name="notesText"
+                    TextColor="Black"
+                    Placeholder="Enter notes here."
+                    FontSize="15"
+                    HeightRequest="400"
+                    MaxLength="250"
+                    BackgroundColor="LightGray"/>
+            <Grid RowDefinitions="*"
+                      ColumnDefinitions="*,*,*"
+                      HorizontalOptions="Center">
+                <Button Grid.Column="0"
+                            Grid.Row="0"
+                            x:Name="saveButton"
+                            Text="Save"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            CornerRadius="10"
+                            Clicked="saveButton_Clicked"/>
+                <Button Grid.Row="0"
+                            Grid.Column="1"
+                            x:Name="backButton"
+                            Text="Go Back"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            CornerRadius="10"
+                            Clicked="backButton_Clicked"/>
+                <Button Grid.Row="0"
+                        Grid.Column="2"
+                        x:Name="shareButton"
+                        Text="Share"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        
+                        CornerRadius="10"
+                        Clicked="shareButton_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

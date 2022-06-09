@@ -1,0 +1,20 @@
+E:\wgu programing\C971\Degree Planner\Degree Planner\bin\Debug\netstandard2.0\Degree Planner.deps.json
+E:\wgu programing\C971\Degree Planner\Degree Planner\bin\Debug\netstandard2.0\Degree Planner.dll
+E:\wgu programing\C971\Degree Planner\Degree Planner\bin\Debug\netstandard2.0\ref\Degree Planner.dll
+E:\wgu programing\C971\Degree Planner\Degree Planner\bin\Debug\netstandard2.0\Degree Planner.pdb
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\Degree Planner.csproj.AssemblyReference.cache
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\Degree Planner.GeneratedMSBuildEditorConfig.editorconfig
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\App.xaml.g.cs
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\Degree Planner.AssemblyInfoInputs.cache
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\Degree Planner.AssemblyInfo.cs
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\Degree Planner.csproj.CoreCompileInputs.cache
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\XamlC.stamp
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\Degree Planner.dll
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\ref\Degree Planner.dll
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\Degree Planner.pdb
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\TermView.xaml.g.cs
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\CoursePage.xaml.g.cs
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\AssessmentsPage.xaml.g.cs
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\NotesPage.xaml.g.cs
+E:\wgu programing\C971\Degree Planner\Degree Planner\obj\Debug\netstandard2.0\SetNotification.xaml.g.cs

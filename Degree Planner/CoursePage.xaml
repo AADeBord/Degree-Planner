@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Degree_Planner.CoursePage"
+             NavigationPage.HasNavigationBar="False">
+<ContentPage.Content>
+        <RelativeLayout>    
+    <StackLayout>
+            <StackLayout VerticalOptions="StartAndExpand">
+            <Grid RowDefinitions="75" ColumnDefinitions="75, *, 75">
+
+                <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Text="WGU Degree Plan" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center"
+                           TextColor="Black"
+                           FontSize="20"
+                           FontAttributes="Bold"/>
+
+
+                <Image Grid.Column ="2" Grid.Row="0" Source="wguLogo"
+                        HeightRequest="75"/>
+            </Grid>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Label x:Name="termNameText"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Padding="0"/>
+            <Entry x:Name="courseNameText"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="18"/>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+                    
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Label Text="Start Date"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   TextColor="Black"
+                                   Padding="0"/>
+                            <DatePicker x:Name="startDateDP"
+                                        FontSize="18"
+                                        HorizontalOptions="Center"
+                                        Scale=".75"/>
+
+
+                        <Button x:Name="startNotificationButton"
+                                        Text="Set Notification"
+                                        Clicked="startNotificationButton_Clicked"/>
+                    </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Label Text="End Date"
+                                   HorizontalTextAlignment="Center"
+                                   VerticalTextAlignment="Center"
+                                   TextColor="Black"
+                                   Padding="0"/>
+                            <DatePicker x:Name="endDateDP"
+                                        FontSize="18"
+                                        HorizontalOptions="Center"
+                                        Scale=".75"/>
+
+
+                        <Button x:Name="endNotificationButton"
+                                Text="Set Notification"
+                                Clicked="endNotificationButton_Clicked"/>
+                    </StackLayout>
+                    
+                
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Label Text="Status"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   FontSize="18"
+                   TextColor="Black"
+                   Padding="0,0,0,0"
+                   Margin="0,0,0,0"/>
+            <Frame Margin="20,0,20,0"
+                   CornerRadius="10"
+                   HasShadow="True"
+                   HeightRequest="50" 
+                   HorizontalOptions="Center"
+                   WidthRequest="125"
+                   Padding="0">
+                <Picker x:Name="statusPicker"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="Black"
+                    FontSize="18"
+                    Scale=".75"
+                    WidthRequest="200"/>
+            </Frame>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Label Text="Course Instructor"
+                   FontSize="18"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   />
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Padding="0">
+                <Label Text="Name:"
+                       FontSize="18"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+
+                <Entry x:Name="instructorName"
+                       Placeholder="Instructor name"
+                       FontSize="15"
+                       TextColor="Black"
+                       HorizontalOptions="FillAndExpand"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Padding="0">
+                <Label Text="Phone:"
+                       FontSize="18"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+
+                <Entry x:Name="instructorPhone"
+                       Placeholder="555-555-5555"
+                       FontSize="15"
+                       TextColor="Black"
+                       HorizontalOptions="FillAndExpand"
+                       Keyboard="Telephone"/>
+
+            </StackLayout>
+            <StackLayout Orientation="Horizontal"
+                         HorizontalOptions="FillAndExpand"
+                         Padding="0">
+                <Label Text="Email:"
+                       FontSize="18"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+
+                        <Entry x:Name="instructorEmail"
+                       Placeholder="name@wgu.edu"
+                       FontSize="15"
+                       TextColor="Black"
+                       HorizontalOptions="FillAndExpand"
+                       Keyboard="Email"
+                       />
+
+                    </StackLayout>
+            <StackLayout>
+                <Grid RowDefinitions="*"
+                      ColumnDefinitions="*,*"
+                      HorizontalOptions="Center">
+                            <Button x:Name="notesButton"
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    Text="Notes"
+                                    Padding="10"
+                                    CornerRadius="10"
+                                    
+                                    HorizontalOptions="Center"
+                                    Clicked="notesButton_Clicked"/>
+                            <Button x:Name="assessmentsButton"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Text="Assessments"
+                                    Padding="10"
+                                    CornerRadius="10"
+                                    
+                                    HorizontalOptions="Center"
+                                    Clicked="assessmentsButton_Clicked"/>
+                </Grid>
+
+                    </StackLayout>
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Grid RowDefinitions="*"
+                      ColumnDefinitions="*,*"
+                      HorizontalOptions="Center">
+                    
+                    <Button Grid.Row="0"
+                            Grid.Column="0"
+                            x:Name="backButton"
+                            Text="Go Back"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            CornerRadius="10"
+                            Clicked="backButton_Clicked"/>
+                        <Button Grid.Column="1"
+                            Grid.Row="0"
+                            x:Name="saveButton"
+                            Text="Save"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            CornerRadius="10"
+                            Clicked="saveButton_Clicked"/>
+                    </Grid>
+                
+            </StackLayout>
+
+
+
+
+
+        </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Degree_Planner.AssessmentsPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowDefinitions="75" ColumnDefinitions="75, *, 75">
+                <Label Grid.Column="1" Grid.Row="0" 
+                   Text="WGU Degree Plan" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+                <Image Grid.Column ="2" Grid.Row="0" Source="wguLogo" 
+               HeightRequest="75"
+               />
+            </Grid>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Label Text="Assessments" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Label x:Name="courseNameText"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Label Text="Objective Assessment"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="18"/>
+            <Grid RowDefinitions="*" ColumnDefinitions="50,*">
+                <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       Text="Name:"/>
+                <Entry x:Name="nameTextOA" Grid.Column="1" Grid.Row="0"/>
+            </Grid>
+            
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       Text="Due Date"/>
+                
+                <DatePicker x:Name="endDatePickerOA" />
+                <Button x:Name="notificationOAButton" Text="Set Notification" Clicked="notificationOAButton_Clicked"/>
+
+
+
+
+            </StackLayout>
+            
+            <Grid RowDefinitions="*"
+                      ColumnDefinitions="*,*"
+                      HorizontalOptions="Center">
+                <Button Grid.Column="0"
+                            Grid.Row="0"
+                            x:Name="saveButtonOA"
+                            Text="Save"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            CornerRadius="10"
+                            Clicked="saveButtonOA_Clicked"/>
+                <Button Grid.Row="0"
+                            Grid.Column="1"
+                            x:Name="deleteOA"
+                            Text="Delete"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            CornerRadius="10"
+                            Clicked="deleteOA_Clicked"/>
+            </Grid>
+            <BoxView Color="#2196F3" HeightRequest="2" />
+            <Label Text="Performance Assessment"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="18"/>
+            <Grid RowDefinitions="*" ColumnDefinitions="50,*">
+                <Label Grid.Column="0" Grid.Row="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       Text="Name:"/>
+                <Entry x:Name="nameTextPA" Grid.Column="1" Grid.Row="0"/>
+            </Grid>
+            
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Grid.Row="0" Grid.Column="0">
+                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       Text="Due Date"/>
+                
+                <DatePicker x:Name="endDatePickerPA" />
+                    <Button x:Name="notificationPAButton" Text="Set Notification" Clicked="notificationPAButton_Clicked" />
+                </StackLayout>
+
+                
+            
+            <Grid RowDefinitions="*"
+                      ColumnDefinitions="*,*"
+                      HorizontalOptions="Center">
+                <Button Grid.Column="0"
+                            Grid.Row="0"
+                            x:Name="saveButtonPA"
+                            Text="Save"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            CornerRadius="10"
+                            Clicked="saveButtonPA_Clicked"/>
+                <Button Grid.Row="0"
+                            Grid.Column="1"
+                            x:Name="deletePA"
+                            Text="Delete"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            
+                            CornerRadius="10"
+                            Clicked="deletePA_Clicked"/>
+            </Grid>
+            <BoxView Color="#2196F3" HeightRequest="2" />
+            <Button x:Name="goBack"
+                    Text="Go Back"
+                    HorizontalOptions="Center"
+                    CornerRadius="10"
+                    Clicked="goBack_Clicked"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

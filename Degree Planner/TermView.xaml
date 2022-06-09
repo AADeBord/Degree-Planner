@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Degree_Planner.TermView"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowDefinitions="75" ColumnDefinitions="75, *, 75">
+                
+                    <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Text="WGU Degree Plan" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center"
+                           TextColor="Black"
+                           FontSize="20"
+                           FontAttributes="Bold"/>
+                    
+                
+                <Image Grid.Column ="2" Grid.Row="0" Source="wguLogo"
+               HeightRequest="75"
+               />
+            </Grid>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Entry x:Name="termNameText"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"
+                   Placeholder="Enter term name"/>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Grid RowDefinitions="15,50"
+                  ColumnDefinitions="*,*">
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Start Date"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       TextColor="Black"/>
+                       
+                <Label Grid.Row="0"
+                       Grid.Column="1"
+                       Text="End Date"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       TextColor="Black"/>
+                <DatePicker Grid.Row="1"
+                            Grid.Column="0"
+                            x:Name="startDateDP"
+                            FontSize="18"
+                            HorizontalOptions="Center"/>
+                <DatePicker Grid.Row="1"
+                            Grid.Column="1"
+                            x:Name="endDateDP"
+                            FontSize="18"
+                            HorizontalOptions="Center"/>
+
+            </Grid>
+            <Grid RowDefinitions="50"
+              ColumnDefinitions="*,*,*">
+                <Button Grid.Row="0" Grid.Column="0" 
+                    x:Name="addCourse"
+                    Text="Add Course"
+                    FontSize="15"
+                    Clicked="addCourse_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1"
+                    x:Name="viewEditCourse"
+                    Text="View/Edit"
+                    FontSize="15"
+                    Clicked="viewEditCourse_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="2"
+                    x:Name="deleteCourse"
+                    Text="Delete"
+                    FontSize="15"
+                    Clicked="deleteCourse_Clicked"/>
+
+            </Grid>
+            <ListView x:Name="classListView"
+                      HasUnevenRows="True"
+                      ItemSelected="classListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   Text="{Binding CourseName}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="backButton"
+                    Text="Go Back"
+                    Clicked="backButton_Clicked"
+                    HorizontalOptions="CenterAndExpand"/>
+                <Button x:Name="saveButton"
+                        Text="Save"
+                        HorizontalOptions="CenterAndExpand"
+                        Clicked="saveButton_Clicked"/>
+                
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="Degree_Planner.MainPage">
+             
+
+    <StackLayout>
+        <Grid RowDefinitions="75" ColumnDefinitions="75, *, 75">
+            <Label Grid.Column="1" Grid.Row="0" 
+                   Text="WGU Degree Plan" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <Image Grid.Column ="2" Grid.Row="0" Source="wguLogo"
+               HeightRequest="75"
+               />
+        </Grid>
+        <BoxView Color="#2196F3" HeightRequest="2"/>
+        <Label Text="Terms" 
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+        <BoxView Color="#2196F3" HeightRequest="2"/>
+        <Grid RowDefinitions="50"
+              ColumnDefinitions="*,*,*">
+            <Button Grid.Row="0" Grid.Column="0" 
+                    x:Name="addTerm"
+                    Text="Add Term"
+                    FontSize="18"
+                    Clicked="addTerm_Clicked"/>
+            <Button Grid.Row="0" Grid.Column="1"
+                    x:Name="viewEdit"
+                    Clicked="viewEdit_Clicked"
+                    Text="View/Edit"
+                    FontSize="18"/>
+            <Button Grid.Row="0" Grid.Column="2"
+                    x:Name="deleteTerm"
+                    Text="Delete"
+                    FontSize="18"
+                    Clicked="deleteTerm_Clicked"/>
+
+        </Grid>
+
+        <ListView x:Name="TermsListView"
+                  HasUnevenRows="True"
+                  ItemSelected="TermsListView_ItemSelected">
+            <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                        <StackLayout>    
+                        <Label VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                           Text="{Binding TermName}"/>
+                            <Grid RowDefinitions="20,20"
+                                  ColumnDefinitions="*,*">
+                                <Label Grid.Row="0" Grid.Column="0" VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       Text="Start Date"/>
+                                <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       Text="End Date"/>
+                                <Label Grid.Row="1" Grid.Column="0" VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding startDate}"/>
+                                <Label Grid.Row="1" Grid.Column="1" VerticalOptions="Center"
+                                       HorizontalTextAlignment="Center"
+                                       Text="{Binding endDate}"/>
+                            </Grid>
+                        </StackLayout>
+                        </ViewCell>
+                            
+            </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </StackLayout>
+
+</ContentPage>

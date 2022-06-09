@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Degree_Planner.SetNotification"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid RowDefinitions="75" ColumnDefinitions="75, *, 75">
+
+                <Label Grid.Row="0"
+                           Grid.Column="1"
+                           Text="WGU Degree Plan" 
+                           HorizontalTextAlignment="Center" 
+                           VerticalTextAlignment="Center"
+                           TextColor="Black"
+                           FontSize="20"
+                           FontAttributes="Bold"/>
+
+
+                <Image Grid.Column ="2" Grid.Row="0" Source="wguLogo"
+               HeightRequest="75"
+               />
+            </Grid>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Label x:Name="labelText"
+                   HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"
+                   TextColor="Black"
+                   FontSize="20"
+                   FontAttributes="Bold"/>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Label x:Name="notificationType" HorizontalTextAlignment="Center" FontSize="20" TextColor="Black"/>
+            <Label x:Name="courseName" HorizontalTextAlignment="Center" FontSize="15" TextColor="Black"/>
+            <Label x:Name="notificationName" HorizontalTextAlignment="Center" FontSize="15" TextColor="Black"/>
+            <BoxView Color="#2196F3" HeightRequest="2"/>
+            <Grid RowDefinitions="25,*" ColumnDefinitions="*,*">
+                <Label Text="Date" Grid.Row="0" Grid.Column="0" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+                <Label Text="Time" Grid.Row="0" Grid.Column="1" FontSize="20" HorizontalTextAlignment="Center" TextColor="Black"/>
+            
+            
+                <DatePicker x:Name="notificationDate" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center"/>
+                <TimePicker x:Name="notificationTime" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Button x:Name="setNotification" Text="Set Notification" Clicked="setNotification_Clicked"/>
+                <Button x:Name="cancle" Text="Cancle" Clicked="cancle_Clicked"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
